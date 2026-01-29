@@ -25,6 +25,9 @@ import { EnergyFuelModule } from "./energy-fuel/energy-fuel.module";
         username: config.get<string>("DATABASE_USER"),
         password: config.get<string>("DATABASE_PASSWORD"),
         database: config.get<string>("DATABASE_NAME"),
+        ssl: config.get<string>("DATABASE_SSL", "false") === "true"
+          ? { rejectUnauthorized: false }
+          : false,
         autoLoadEntities: true,
         synchronize: false,
         logging: false
