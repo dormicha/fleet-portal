@@ -12,6 +12,7 @@ import { FaultsModule } from "./faults/faults.module";
 import { AlertsModule } from "./alerts/alerts.module";
 import { DocumentsModule } from "./documents/documents.module";
 import { EnergyFuelModule } from "./energy-fuel/energy-fuel.module";
+import { HealthModule } from "./health/health.module";
 
 @Module({
   imports: [
@@ -43,7 +44,8 @@ import { EnergyFuelModule } from "./energy-fuel/energy-fuel.module";
     FaultsModule,
     AlertsModule,
     DocumentsModule,
-    EnergyFuelModule
+    EnergyFuelModule,
+    HealthModule
   ]
 })
 export class AppModule {}
